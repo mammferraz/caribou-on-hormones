@@ -1,0 +1,3 @@
+               df      AIC deltaAIC
+m_cort_nolc 17.67 12209.58    95.21
+m_cort_pca  25.30 12114.37     0.00

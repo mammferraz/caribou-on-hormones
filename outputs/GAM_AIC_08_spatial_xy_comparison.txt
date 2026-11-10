@@ -1,0 +1,12 @@
+                     df      AIC
+m_cort_wolf    21.53973 12202.18
+m_cort_wolf_xy 40.54243 12149.43
+                     df      BIC
+m_cort_wolf    21.53973 12314.18
+m_cort_wolf_xy 40.54243 12360.24
+                   df      AIC
+m_t3_wolf    21.32843 12186.21
+m_t3_wolf_xy 45.10183 11761.95
+                   df      BIC
+m_t3_wolf    21.32843 12297.11
+m_t3_wolf_xy 45.10183 11996.47

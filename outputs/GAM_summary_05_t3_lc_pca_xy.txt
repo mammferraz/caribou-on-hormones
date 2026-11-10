@@ -1,0 +1,35 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+t3 ~ s(survey, bs = "re") + year_f + preg_group + s(LC_PC1, k = 3, 
+    bs = "tp") + s(LC_PC2, k = 3, bs = "tp") + s(LC_PC3, k = 3, 
+    bs = "tp") + s(LC_PC4, k = 3, bs = "tp") + s(julian, k = 8, 
+    bs = "tp") + s(x_proj, y_proj, bs = "tp", k = 30)
+
+Parametric coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   3.60940    0.05056  71.394  < 2e-16 ***
+year_f2022                   -0.05129    0.06088  -0.843  0.39966    
+year_f2023                    0.51265    0.09864   5.197 2.35e-07 ***
+year_f2024                    0.39368    0.20425   1.927  0.05414 .  
+preg_groupFemale_nonpregnant  0.11951    0.04459   2.680  0.00745 ** 
+preg_groupFemale_pregnant     0.01980    0.03209   0.617  0.53738    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                      edf Ref.df      F  p-value    
+s(survey)         0.01644  5.000  0.002  0.53181    
+s(LC_PC1)         1.80747  1.957 24.082  < 2e-16 ***
+s(LC_PC2)         1.96484  1.997 14.665 1.18e-06 ***
+s(LC_PC3)         1.85882  1.974  5.873  0.00196 ** 
+s(LC_PC4)         1.55355  1.779  8.025  0.00617 ** 
+s(julian)         3.89716  4.787  4.020  0.00161 ** 
+s(x_proj,y_proj) 26.41243 28.520 11.387  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.402   Deviance explained = 73.3%
+-REML = 5917.8  Scale est. = 0.27122   n = 1339

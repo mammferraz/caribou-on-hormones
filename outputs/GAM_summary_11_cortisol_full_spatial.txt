@@ -1,0 +1,45 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+cortisol ~ s(survey, bs = "re") + year_f + preg_group + s(snow_on_ground_fcm2, 
+    k = 4, bs = "tp") + s(log_dist_road_km, k = 5, bs = "tp") + 
+    s(log_dist_allroad_km, k = 5, bs = "tp") + s(log_wolf_suit, 
+    k = 6, bs = "tp") + s(log_dist_mine, k = 6, bs = "tp") + 
+    s(log_dist_community, k = 6, bs = "tp") + s(LC_PC1, k = 3, 
+    bs = "tp") + s(LC_PC2, k = 3, bs = "tp") + s(LC_PC3, k = 3, 
+    bs = "tp") + s(LC_PC4, k = 3, bs = "tp") + s(julian, k = 8, 
+    bs = "tp") + s(x_proj, y_proj, bs = "tp", k = 30)
+
+Parametric coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   4.52410    0.07902  57.251  < 2e-16 ***
+year_f2022                   -0.55212    0.09560  -5.775 9.60e-09 ***
+year_f2023                   -0.06279    0.12305  -0.510    0.610    
+year_f2024                   -0.83231    0.14562  -5.715 1.35e-08 ***
+preg_groupFemale_nonpregnant  0.12025    0.03043   3.952 8.16e-05 ***
+preg_groupFemale_pregnant    -0.01365    0.02185  -0.625    0.532    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                         edf Ref.df      F  p-value    
+s(survey)              1.488  5.000  0.535   0.1117    
+s(snow_on_ground_fcm2) 2.630  2.851 10.276 6.30e-05 ***
+s(log_dist_road_km)    1.001  1.002  0.112   0.7389    
+s(log_dist_allroad_km) 1.000  1.000  0.027   0.8698    
+s(log_wolf_suit)       1.000  1.000  2.133   0.1444    
+s(log_dist_mine)       1.035  1.065  1.189   0.2921    
+s(log_dist_community)  1.002  1.004  2.259   0.1331    
+s(LC_PC1)              1.961  1.997 11.866 6.47e-06 ***
+s(LC_PC2)              1.894  1.985  3.530   0.0264 *  
+s(LC_PC3)              1.001  1.001  0.530   0.4665    
+s(LC_PC4)              1.733  1.920  4.469   0.0165 *  
+s(julian)              6.221  6.748 22.315  < 2e-16 ***
+s(x_proj,y_proj)       4.854  6.680  1.396   0.2045    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =   0.33   Deviance explained = 55.1%
+-REML =   6090  Scale est. = 0.12812   n = 1339

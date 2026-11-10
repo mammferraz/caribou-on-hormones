@@ -1,0 +1,44 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+cortisol ~ s(survey, bs = "re") + year_f + preg_group + s(snow_on_ground_fcm2, 
+    k = 4, bs = "tp") + s(log_dist_road_km, k = 5, bs = "tp") + 
+    s(log_dist_allroad_km, k = 5, bs = "tp") + s(log_wolf_suit, 
+    k = 6, bs = "tp") + s(log_dist_mine, k = 6, bs = "tp") + 
+    s(log_dist_community, k = 6, bs = "tp") + s(LC_PC1, k = 3, 
+    bs = "tp") + s(LC_PC2, k = 3, bs = "tp") + s(LC_PC3, k = 3, 
+    bs = "tp") + s(LC_PC4, k = 3, bs = "tp") + s(julian, k = 8, 
+    bs = "tp")
+
+Parametric coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   4.52372    0.08481  53.338  < 2e-16 ***
+year_f2022                   -0.54782    0.09475  -5.782 9.24e-09 ***
+year_f2023                   -0.11472    0.11791  -0.973    0.331    
+year_f2024                   -0.88189    0.13933  -6.329 3.37e-10 ***
+preg_groupFemale_nonpregnant  0.12129    0.03064   3.958 7.96e-05 ***
+preg_groupFemale_pregnant    -0.01474    0.02197  -0.671    0.502    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                         edf Ref.df      F  p-value    
+s(survey)              2.381  5.000  1.529 0.012287 *  
+s(snow_on_ground_fcm2) 2.578  2.809  9.500 0.000205 ***
+s(log_dist_road_km)    1.001  1.002  0.406 0.523888    
+s(log_dist_allroad_km) 1.153  1.278  0.307 0.597598    
+s(log_wolf_suit)       1.001  1.002  4.860 0.027614 *  
+s(log_dist_mine)       1.665  2.042  0.383 0.654732    
+s(log_dist_community)  1.032  1.062  2.586 0.107722    
+s(LC_PC1)              1.961  1.997 10.332 3.03e-05 ***
+s(LC_PC2)              1.935  1.995  6.068 0.002309 ** 
+s(LC_PC3)              1.001  1.002  0.816 0.366509    
+s(LC_PC4)              1.763  1.937  4.458 0.015400 *  
+s(julian)              6.274  6.776 22.650  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.328   Deviance explained = 54.7%
+-REML = 6089.9  Scale est. = 0.13027   n = 1339

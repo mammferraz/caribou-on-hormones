@@ -1,0 +1,31 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+cortisol ~ s(survey, bs = "re") + year_f + preg_group + te(snow_on_ground_fcm2, 
+    log(dist_road_km), k = c(6, 6), bs = "tp") + s(julian, k = 8, 
+    bs = "tp") + s(x_proj, y_proj, bs = "tp", k = 30)
+
+Parametric coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   4.65350    0.09608  48.433  < 2e-16 ***
+year_f2022                   -0.66716    0.14076  -4.740 2.38e-06 ***
+year_f2023                   -0.31502    0.15767  -1.998   0.0459 *  
+year_f2024                   -0.96064    0.15928  -6.031 2.12e-09 ***
+preg_groupFemale_nonpregnant  0.13390    0.03107   4.310 1.76e-05 ***
+preg_groupFemale_pregnant    -0.00905    0.02245  -0.403   0.6870    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                                edf Ref.df      F  p-value    
+s(survey)                                  0.000397  5.000  0.000    0.881    
+te(snow_on_ground_fcm2,log(dist_road_km)) 18.325571 21.359  3.328 2.53e-07 ***
+s(julian)                                  6.160041  6.683 16.530  < 2e-16 ***
+s(x_proj,y_proj)                           4.067122  5.342  1.165    0.321    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.317   Deviance explained = 54.1%
+-REML = 6090.7  Scale est. = 0.1353    n = 1339

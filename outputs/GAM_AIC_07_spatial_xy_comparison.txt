@@ -1,0 +1,12 @@
+                     df      AIC
+m_cort_mine    20.06860 12206.42
+m_cort_mine_xy 38.07801 12155.21
+                     df      BIC
+m_cort_mine    20.06860 12310.77
+m_cort_mine_xy 38.07801 12353.20
+                   df      AIC
+m_t3_mine    22.29067 12222.91
+m_t3_mine_xy 45.76549 11684.89
+                   df      BIC
+m_t3_mine    22.29067 12338.81
+m_t3_mine_xy 45.76549 11922.85

@@ -1,0 +1,4 @@
+                  df      AIC
+m_cort_clim 20.75159 12121.27
+m_cort_snow 17.01625 12130.14
+m_cort_temp 20.85120 12123.15

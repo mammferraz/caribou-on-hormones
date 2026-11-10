@@ -1,0 +1,27 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+progesterone ~ s(survey, bs = "re") + year_f + preg_group + s(julian, 
+    k = 20)
+
+Parametric coefficients:
+                          Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                5.76861    0.03485 165.524  < 2e-16 ***
+year_f2022                -0.06458    0.03466  -1.863   0.0628 .  
+year_f2023                -0.42406    0.04139 -10.247  < 2e-16 ***
+year_f2024                -0.35991    0.05703  -6.311 4.82e-10 ***
+preg_groupFemale_pregnant  3.04759    0.02732 111.545  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+             edf Ref.df     F  p-value    
+s(survey) 0.5108  5.000 0.124 0.270132    
+s(julian) 3.7000  4.657 4.921 0.000346 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.744   Deviance explained = 91.9%
+-REML = 5953.7  Scale est. = 0.10389   n = 738

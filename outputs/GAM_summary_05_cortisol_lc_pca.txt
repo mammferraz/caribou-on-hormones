@@ -1,0 +1,35 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+cortisol ~ s(survey, bs = "re") + year_f + preg_group + s(LC_PC1, 
+    k = 3, bs = "tp") + s(LC_PC2, k = 3, bs = "tp") + s(LC_PC3, 
+    k = 3, bs = "tp") + s(LC_PC4, k = 3, bs = "tp") + s(julian, 
+    k = 8, bs = "tp") + s(x_proj, y_proj, bs = "tp", k = 30)
+
+Parametric coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   4.36106    0.06977  62.503  < 2e-16 ***
+year_f2022                   -0.39601    0.03550 -11.154  < 2e-16 ***
+year_f2023                    0.17150    0.07502   2.286 0.022408 *  
+year_f2024                   -0.46586    0.12509  -3.724 0.000204 ***
+preg_groupFemale_nonpregnant  0.11671    0.03053   3.822 0.000138 ***
+preg_groupFemale_pregnant    -0.01028    0.02191  -0.469 0.638993    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                   edf Ref.df      F  p-value    
+s(survey)        3.045  5.000  2.204  0.00250 ** 
+s(LC_PC1)        1.945  1.993 11.476 2.42e-05 ***
+s(LC_PC2)        1.921  1.986  6.676  0.00240 ** 
+s(LC_PC3)        1.529  1.762  2.268  0.06502 .  
+s(LC_PC4)        1.001  1.002  8.993  0.00275 ** 
+s(julian)        6.269  6.774 22.172  < 2e-16 ***
+s(x_proj,y_proj) 8.770 12.136  1.738  0.04805 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.323   Deviance explained = 54.3%
+-REML = 6088.1  Scale est. = 0.13048   n = 1339

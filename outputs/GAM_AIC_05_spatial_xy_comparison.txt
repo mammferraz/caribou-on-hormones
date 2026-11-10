@@ -1,0 +1,12 @@
+                    df      AIC
+m_cort_pca    25.30165 12114.37
+m_cort_pca_xy 35.84688 12100.34
+                    df      BIC
+m_cort_pca    25.30165 12245.93
+m_cort_pca_xy 35.84688 12286.74
+                  df      AIC
+m_t3_pca    17.62894 12081.73
+m_t3_pca_xy 46.89028 11726.29
+                  df      BIC
+m_t3_pca    17.62894 12173.39
+m_t3_pca_xy 46.89028 11970.10

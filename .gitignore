@@ -1,0 +1,67 @@
+# ============================================================
+# CRITICAL — species-at-risk location protection
+# ------------------------------------------------------------
+# Boreal caribou are listed as Threatened. Nothing containing collection
+# coordinates may ever enter this repository. These rules are a safety net,
+# not the primary control: the primary control is
+# scripts/13_build_public_dataset.R, which refuses to write a file that
+# still carries a coordinate-like column.
+#
+# If you add a new data file, check it against data/DATA_DICTIONARY.md
+# before committing.
+# ============================================================
+
+# The raw dataset — contains Latitude/Longitude. NEVER commit.
+All_data_updated.csv
+*_backup*.csv
+*_pre_dedup*.csv
+
+# Anything with coordinates in the name
+*coordinates*
+*coords*
+*latlon*
+*_gps*
+
+# Distance-source spatial layers (large, and geolocate the study animals)
+*.geojson
+*.gpkg
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+
+# Large rasters — download separately, see README
+*.tif
+*.tiff
+*.7z
+
+# Road layer caches built by 00b_road_layers.R
+roads_winter.gpkg
+roads_allseason.gpkg
+
+# Per-sample distance tables (row order maps back to collection sites)
+AllSeasonRoad_distances.csv
+
+# Serialised mgcv model objects. gam() stores its MODEL FRAME inside the
+# fitted object, so any model containing s(x_proj, y_proj) carries the full
+# coordinate table — m$model$x_proj recovers every collection location in
+# two lines of R. Publish the .txt summaries and rendered surfaces instead.
+*.rds
+outputs/models/
+
+# ============================================================
+# Ordinary R / OS noise
+# ============================================================
+.RData
+.RDataTmp*
+.Rhistory
+.Rproj.user/
+.Rproj
+*.Rproj
+.DS_Store
+Thumbs.db
+_docx_tmp/
+_staged.docx

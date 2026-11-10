@@ -1,0 +1,26 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+t3 ~ s(survey, bs = "re") + road_days_open + preg_group + s(julian, 
+    k = 8, bs = "tp")
+
+Parametric coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   3.14420    0.40893   7.689 2.88e-14 ***
+road_days_open                0.01120    0.00350   3.201   0.0014 ** 
+preg_groupFemale_nonpregnant  0.16623    0.06906   2.407   0.0162 *  
+preg_groupFemale_pregnant     0.01040    0.04914   0.212   0.8325    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+            edf Ref.df     F p-value    
+s(survey) 4.705  5.000 70.32  <2e-16 ***
+s(julian) 6.713  6.968 12.11  <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.179   Deviance explained = 51.6%
+-REML = 6296.8  Scale est. = 0.68371   n = 1344

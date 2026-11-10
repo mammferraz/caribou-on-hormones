@@ -1,0 +1,6 @@
+                     df      AIC
+m_cort_full    33.13283 12082.11
+m_cort_full_xy 37.46264 12078.00
+                     df      BIC
+m_cort_full    33.13283 12254.39
+m_cort_full_xy 37.46264 12272.80

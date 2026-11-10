@@ -1,0 +1,45 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+t3 ~ s(survey, bs = "re") + year_f + preg_group + s(snow_on_ground, 
+    k = 4, bs = "tp") + s(log_dist_road_km, k = 5, bs = "tp") + 
+    s(log_dist_allroad_km, k = 5, bs = "tp") + s(log_wolf_suit, 
+    k = 6, bs = "tp") + s(log_dist_mine, k = 6, bs = "tp") + 
+    s(log_dist_community, k = 6, bs = "tp") + s(LC_PC1, k = 3, 
+    bs = "tp") + s(LC_PC2, k = 3, bs = "tp") + s(LC_PC3, k = 3, 
+    bs = "tp") + s(LC_PC4, k = 3, bs = "tp") + s(julian, k = 8, 
+    bs = "tp") + s(x_proj, y_proj, bs = "tp", k = 30)
+
+Parametric coefficients:
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   1.71118    0.33094   5.171 2.71e-07 ***
+year_f2022                    2.40590    0.34334   7.007 3.93e-12 ***
+year_f2023                    2.94647    0.35090   8.397  < 2e-16 ***
+year_f2024                    3.82957    0.42127   9.091  < 2e-16 ***
+preg_groupFemale_nonpregnant  0.10496    0.03728   2.816  0.00494 ** 
+preg_groupFemale_pregnant     0.01701    0.02690   0.632  0.52740    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                          edf Ref.df      F  p-value    
+s(survey)               4.227  5.000  7.159  < 2e-16 ***
+s(snow_on_ground)       2.945  2.985 23.981  < 2e-16 ***
+s(log_dist_road_km)     3.493  3.838  3.677 0.004425 ** 
+s(log_dist_allroad_km)  3.326  3.701  5.361 0.001148 ** 
+s(log_wolf_suit)        3.450  4.114  8.996  8.6e-07 ***
+s(log_dist_mine)        4.930  4.980 33.864  < 2e-16 ***
+s(log_dist_community)   3.584  4.227  3.244 0.007656 ** 
+s(LC_PC1)               1.602  1.831  7.298 0.000685 ***
+s(LC_PC2)               1.819  1.957  3.110 0.072539 .  
+s(LC_PC3)               1.939  1.991  6.695 0.001459 ** 
+s(LC_PC4)               1.747  1.928 24.084  < 2e-16 ***
+s(julian)               5.208  6.010 12.605  < 2e-16 ***
+s(x_proj,y_proj)       25.653 27.672 10.081  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.563   Deviance explained = 79.5%
+-REML = 5810.1  Scale est. = 0.18261   n = 1339

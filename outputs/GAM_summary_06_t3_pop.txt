@@ -1,0 +1,31 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+t3 ~ s(survey, bs = "re") + year_f + preg_group + s(log_dist_community, 
+    k = 6, bs = "tp") + s(julian, k = 8, bs = "tp") + s(x_proj, 
+    y_proj, bs = "tp", k = 30)
+
+Parametric coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   3.534579   0.052218  67.689  < 2e-16 ***
+year_f2022                   -0.127598   0.061480  -2.075   0.0381 *  
+year_f2023                    0.692969   0.099494   6.965 5.21e-12 ***
+year_f2024                    0.865110   0.219660   3.938 8.64e-05 ***
+preg_groupFemale_nonpregnant  0.110345   0.045858   2.406   0.0163 *  
+preg_groupFemale_pregnant     0.005933   0.032888   0.180   0.8569    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                            edf Ref.df      F  p-value    
+s(survey)              0.000216  5.000  0.000    0.404    
+s(log_dist_community)  1.001454  1.003  1.233    0.267    
+s(julian)              6.472749  6.886  7.013 3.96e-07 ***
+s(x_proj,y_proj)      26.571068 28.595 17.057  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =   0.36   Deviance explained = 71.2%
+-REML = 5962.9  Scale est. = 0.28786   n = 1339

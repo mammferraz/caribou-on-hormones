@@ -1,0 +1,36 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+t3 ~ s(survey, bs = "re") + year_f + preg_group + s(sqrt_OpenBog, 
+    k = 6, bs = "tp") + s(TreedPeat, k = 6, bs = "tp") + s(ConiferousSwamp, 
+    k = 6, bs = "tp") + s(sqrt_Deciduous, k = 6, bs = "tp") + 
+    s(julian, k = 8, bs = "tp") + s(x_proj, y_proj, bs = "tp", 
+    k = 30)
+
+Parametric coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   3.524436   0.052977  66.528  < 2e-16 ***
+year_f2022                   -0.032719   0.062890  -0.520  0.60297    
+year_f2023                    0.721155   0.104022   6.933  6.5e-12 ***
+year_f2024                    0.672852   0.216794   3.104  0.00195 ** 
+preg_groupFemale_nonpregnant  0.111878   0.045390   2.465  0.01384 *  
+preg_groupFemale_pregnant     0.001781   0.032666   0.055  0.95653    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                         edf Ref.df     F  p-value    
+s(survey)           0.001116  5.000 0.000 0.894013    
+s(sqrt_OpenBog)     3.135884  3.749 3.259 0.015798 *  
+s(TreedPeat)        3.081179  3.751 5.360 0.000499 ***
+s(ConiferousSwamp)  2.794025  3.426 5.330 0.000670 ***
+s(sqrt_Deciduous)   1.002223  1.004 0.120 0.730095    
+s(julian)           5.915457  6.560 3.863 0.002516 ** 
+s(x_proj,y_proj)   25.758813 28.280 9.337  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.383   Deviance explained = 72.3%
+-REML = 5948.1  Scale est. = 0.27796   n = 1339

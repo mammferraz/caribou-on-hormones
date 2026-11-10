@@ -1,0 +1,12 @@
+                    df      AIC
+m_cort_pop    22.01466 12169.90
+m_cort_pop_xy 30.44108 12156.91
+                    df      BIC
+m_cort_pop    22.01466 12284.37
+m_cort_pop_xy 30.44108 12315.19
+                  df      AIC
+m_t3_pop    19.62732 12315.74
+m_t3_pop_xy 41.77602 11818.17
+                  df      BIC
+m_t3_pop    19.62732 12417.79
+m_t3_pop_xy 41.77602 12035.39

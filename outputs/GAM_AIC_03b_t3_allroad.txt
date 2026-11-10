@@ -1,0 +1,6 @@
+                     df      AIC
+m_t3_noallroad 16.61117 12322.86
+m_t3_allroad   16.13270 12320.30
+                     df      BIC
+m_t3_noallroad 16.61117 12409.23
+m_t3_allroad   16.13270 12404.18

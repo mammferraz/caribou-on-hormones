@@ -1,0 +1,12 @@
+                        df      AIC
+m_cort_allroad    15.57425 12234.33
+m_cort_allroad_xy 38.17115 12177.20
+                        df      BIC
+m_cort_allroad    15.57425 12315.31
+m_cort_allroad_xy 38.17115 12375.67
+                      df      AIC
+m_t3_allroad    16.13270 12320.30
+m_t3_allroad_xy 40.83303 11815.96
+                      df      BIC
+m_t3_allroad    16.13270 12404.18
+m_t3_allroad_xy 40.83303 12028.28

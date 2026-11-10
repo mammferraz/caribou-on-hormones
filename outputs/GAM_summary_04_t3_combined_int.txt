@@ -1,0 +1,31 @@
+
+Family: Gamma 
+Link function: log 
+
+Formula:
+t3 ~ s(survey, bs = "re") + year_f + preg_group + te(snow_on_ground, 
+    log(dist_road_km), k = c(6, 6), bs = "tp") + s(julian, k = 8, 
+    bs = "tp") + s(x_proj, y_proj, bs = "tp", k = 30)
+
+Parametric coefficients:
+                               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   2.9806336  0.2329903  12.793  < 2e-16 ***
+year_f2022                    0.3329229  0.3652127   0.912  0.36216    
+year_f2023                    1.7509075  0.3846826   4.552 5.83e-06 ***
+year_f2024                    1.9230054  0.3907614   4.921 9.72e-07 ***
+preg_groupFemale_nonpregnant  0.1272944  0.0415023   3.067  0.00221 ** 
+preg_groupFemale_pregnant    -0.0009268  0.0299699  -0.031  0.97533    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                           edf Ref.df      F  p-value    
+s(survey)                             0.002824  5.000  0.000    0.932    
+te(snow_on_ground,log(dist_road_km)) 22.698822 25.111  5.902  < 2e-16 ***
+s(julian)                             6.369127  6.812  7.933 4.05e-07 ***
+s(x_proj,y_proj)                     24.640632 27.348 11.487  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.447   Deviance explained = 75.4%
+-REML = 5895.1  Scale est. = 0.23259   n = 1339

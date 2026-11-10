@@ -1,0 +1,12 @@
+                    df      AIC
+m_cort_road    17.2458 12248.66
+m_cort_road_xy 35.0702 12190.73
+                    df      BIC
+m_cort_road    17.2458 12338.33
+m_cort_road_xy 35.0702 12373.09
+                   df      AIC
+m_t3_road    18.05047 12205.49
+m_t3_road_xy 40.39037 11813.65
+                   df      BIC
+m_t3_road    18.05047 12299.34
+m_t3_road_xy 40.39037 12023.67
